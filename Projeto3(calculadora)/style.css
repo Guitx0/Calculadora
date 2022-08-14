@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.425),
+    rgba(255, 0, 0, 0.452)
+  );
+}
+
+.grid-conteiner {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-conteiner > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: #222;
+  color: #eee;
+}
+
+.grid-conteiner > button:hover {
+  background-color: white;
+  color: #222;
+}
+
+.grid-conteiner > .operator {
+  background-color: rgba(155, 4, 4, 0.822);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.grid-conteiner > .output {
+  grid-column: 1/-1;
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.grid-conteiner > .output > .previous-operand {
+  color: rgba(122, 121, 121, 0.842);
+  font-size: 1rem;
+}
+
+.grid-conteiner > .output > .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
